@@ -59,7 +59,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    
+    UIImageView *imageView = (UIImageView *)[cell viewWithTag:101];
+    imageView.image = [UIImage imageNamed:@"images/bull"];
+    imageView.image = [UIImage imageNamed:@"bull"];
     
     UILabel *titleLabel = (UILabel *)[cell viewWithTag:102];
     titleLabel.text = @"Demo Title";
