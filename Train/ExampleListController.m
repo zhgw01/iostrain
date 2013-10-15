@@ -14,11 +14,27 @@
 
 @implementation ExampleListController
 
+- (void) setup
+{
+    self.examples = [NSArray arrayWithObjects:@"UIViewController", nil];
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        
+    }
+    return self;
+}
+
+- (id) initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        // Custom initialization
+        [self setup];
     }
     return self;
 }
@@ -49,8 +65,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    //return [self.examples count];
-    return 3;
+    return [self.examples count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -73,6 +88,25 @@
     priceLabel.text = @"150";
     
     return cell;
+}
+
+#pragma mark - Table view delegate
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    id controllerClass = NSClassFromString([self.examples objectAtIndex:indexPath.row]);
+    UIViewController* controller = [[controllerClass alloc] init];
+    
+    /*
+    [UIView animateWithDuration:0.75 animations:^{
+        [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+        [self.navigationController pushViewController:controller animated:NO];
+        [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
+    }];
+     */
+    
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 /*
