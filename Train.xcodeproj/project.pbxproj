@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		113A89B618155792008573A3 /* ListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 113A89B518155792008573A3 /* ListModel.m */; };
 		119C91B0180579A30069014D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 119C91AF180579A30069014D /* Foundation.framework */; };
 		119C91B2180579A30069014D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 119C91B1180579A30069014D /* CoreGraphics.framework */; };
 		119C91B4180579A30069014D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 119C91B3180579A30069014D /* UIKit.framework */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		113A89B418155792008573A3 /* ListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListModel.h; sourceTree = "<group>"; };
+		113A89B518155792008573A3 /* ListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListModel.m; sourceTree = "<group>"; };
 		119C91AC180579A30069014D /* Train.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Train.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		119C91AF180579A30069014D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		119C91B1180579A30069014D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,6 +85,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		113A89B21815543A008573A3 /* CoreAnimation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CoreAnimation;
+			sourceTree = "<group>";
+		};
+		113A89B31815546E008573A3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				113A89B418155792008573A3 /* ListModel.h */,
+				113A89B518155792008573A3 /* ListModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		119C91A3180579A30069014D = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +135,8 @@
 		119C91B5180579A30069014D /* Train */ = {
 			isa = PBXGroup;
 			children = (
+				113A89B31815546E008573A3 /* Model */,
+				113A89B21815543A008573A3 /* CoreAnimation */,
 				119C91BE180579A30069014D /* AppDelegate.h */,
 				119C91BF180579A30069014D /* AppDelegate.m */,
 				119C91C1180579A30069014D /* Main.storyboard */,
@@ -256,6 +277,7 @@
 				119C91E618059B7E0069014D /* ExampleListController.m in Sources */,
 				119C91C0180579A30069014D /* AppDelegate.m in Sources */,
 				119C91BC180579A30069014D /* main.m in Sources */,
+				113A89B618155792008573A3 /* ListModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

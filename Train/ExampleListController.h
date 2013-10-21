@@ -9,12 +9,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ListModel.h"
 
 @interface ExampleListController : UITableViewController
-{
-}
 
-@property (nonatomic, strong) NSArray *examples;
+@property (nonatomic, strong) ListModel* model;
 
 @end

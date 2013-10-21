@@ -8,52 +8,47 @@
 
 #import "ExampleListController.h"
 
+
 @interface ExampleListController ()
+
+@property (strong, readonly, nonatomic) NSArray* examples;
 
 @end
 
 @implementation ExampleListController
 
-- (void) setup
+- (void) createModel
 {
-    self.examples = [NSArray arrayWithObjects:@"UIViewController", nil];
+    self.model = [[ListModel alloc] init];
+    
+    //better to read from a file or register based
+    ListModel* animationModel = [[ListModel alloc] init];
+    animationModel.name = @"Core Animation";
+    animationModel.description = @"example of core animation";
+    animationModel.rate = 5;
+    animationModel.controller = @"ExampleListController";
+    animationModel.image = @"bull";
+    
+    [self.model addExample:animationModel];
+    
+    
 }
 
-- (id)initWithStyle:(UITableViewStyle)style
+
+- (NSArray *) examples
 {
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-        
-    }
-    return self;
+    return self.model.examples;
 }
+
 
 - (id) initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
         // Custom initialization
-        [self setup];
+        [self createModel];
     }
     return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -73,19 +68,20 @@
     static NSString *CellIdentifier = @"CustomCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
+    ListModel* model = [self.examples objectAtIndex:indexPath.row];
+    
     // Configure the cell...
     UIImageView *imageView = (UIImageView *)[cell viewWithTag:101];
-    imageView.image = [UIImage imageNamed:@"images/bull"];
-    imageView.image = [UIImage imageNamed:@"bull"];
+    imageView.image = [UIImage imageNamed:model.image];
     
     UILabel *titleLabel = (UILabel *)[cell viewWithTag:102];
-    titleLabel.text = @"Demo Title";
+    titleLabel.text = model.name;
     
     UILabel *rateLabel = (UILabel *) [cell viewWithTag:103];
-    rateLabel.text = @"description";
+    rateLabel.text = model.description;
     
     UILabel *priceLabel = (UILabel *) [cell viewWithTag:104];
-    priceLabel.text = @"150";
+    priceLabel.text = [NSString stringWithFormat:@"%d", self.model.rate];
     
     return cell;
 }
@@ -95,69 +91,13 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
-    id controllerClass = NSClassFromString([self.examples objectAtIndex:indexPath.row]);
-    UIViewController* controller = [[controllerClass alloc] init];
-    
-    /*
-    [UIView animateWithDuration:0.75 animations:^{
-        [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-        [self.navigationController pushViewController:controller animated:NO];
-        [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
-    }];
-     */
+    ListModel* model = [self.examples objectAtIndex:indexPath.row];
+    id controllerClass = NSClassFromString(model.controller);
+    id controller = [[controllerClass alloc] init];
+    [controller setModel:model];
     
     [self.navigationController pushViewController:controller animated:YES];
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-
- */
 
 @end
