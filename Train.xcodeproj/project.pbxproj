@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11139E33182612800081148D /* example.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11139E32182612800081148D /* example.plist */; };
 		113A89B618155792008573A3 /* ListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 113A89B518155792008573A3 /* ListModel.m */; };
 		119C91B0180579A30069014D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 119C91AF180579A30069014D /* Foundation.framework */; };
 		119C91B2180579A30069014D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 119C91B1180579A30069014D /* CoreGraphics.framework */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11139E32182612800081148D /* example.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = example.plist; path = Data/example.plist; sourceTree = "<group>"; };
 		113A89B418155792008573A3 /* ListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListModel.h; sourceTree = "<group>"; };
 		113A89B518155792008573A3 /* ListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListModel.m; sourceTree = "<group>"; };
 		119C91AC180579A30069014D /* Train.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Train.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11139E311826122D0081148D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				11139E32182612800081148D /* example.plist */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		113A89B21815543A008573A3 /* CoreAnimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +145,7 @@
 		119C91B5180579A30069014D /* Train */ = {
 			isa = PBXGroup;
 			children = (
+				11139E311826122D0081148D /* Data */,
 				113A89B31815546E008573A3 /* Model */,
 				113A89B21815543A008573A3 /* CoreAnimation */,
 				119C91BE180579A30069014D /* AppDelegate.h */,
@@ -256,6 +267,7 @@
 				119C91C8180579A30069014D /* Images.xcassets in Resources */,
 				119C91BA180579A30069014D /* InfoPlist.strings in Resources */,
 				119C91C3180579A30069014D /* Main.storyboard in Resources */,
+				11139E33182612800081148D /* example.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

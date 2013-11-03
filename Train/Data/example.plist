@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict/>
+<array>
+<dict>
+	<key>name</key>
+	<string>Core Animation</string>
+	<key>description</key>
+	<string>example of animations</string>
+	<key>controller</key>
+	<string>ExampleListController</string>
+	<key>image</key>
+	<string>bull</string>
+	<key>rate</key>
+	<integer>5</integer>
+	<key>examples</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>CA1</string>
+			<key>description</key>
+			<string>unknow example</string>
+			<key>controller</key>
+			<string>UIViewController</string>
+			<key>image</key>
+			<string>cat</string>
+			<key>rate</key>
+			<integer>0</integer>
+			<key>examples</key>
+			<array/>
+		</dict>
+	</array>
+</dict>
+</array>
 </plist>

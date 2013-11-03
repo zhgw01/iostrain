@@ -17,22 +17,60 @@
 
 @implementation ExampleListController
 
+
+
+- (void) createModel:(ListModel *) model fromDict:(NSDictionary *)data
+{
+    ListModel* childModel = [[ListModel alloc] init];
+    
+    childModel.name = [data objectForKey:@"name"];
+    childModel.description = [data objectForKey:@"description"];
+    childModel.controller = [data objectForKey:@"controller"];
+    childModel.image = [data objectForKey:@"image"];
+    childModel.rate = [[data objectForKey:@"rate"] integerValue];
+    
+    NSArray* children = [data objectForKey:@"examples"];
+    for (NSDictionary* modelData in children) {
+        [self createModel:childModel fromDict:modelData];
+    }
+
+    
+    [model addExample:childModel];
+}
+
+
+/*
 - (void) createModel
 {
     self.model = [[ListModel alloc] init];
     
-    //better to read from a file or register based
-    ListModel* animationModel = [[ListModel alloc] init];
-    animationModel.name = @"Core Animation";
-    animationModel.description = @"example of core animation";
-    animationModel.rate = 5;
-    animationModel.controller = @"ExampleListController";
-    animationModel.image = @"bull";
+    NSString *modelFile = [[NSBundle mainBundle] pathForResource:@"example" ofType:@"plist"];
+    NSArray *modelArray = [[NSArray alloc] initWithContentsOfFile:modelFile];
     
-    [self.model addExample:animationModel];
-    
+    for (NSDictionary* modelData in modelArray) {
+        [self createModel:self.model fromDict:modelData];
+    }
     
 }
+ */
+
+- (ListModel *) model
+{
+    if (!_model) {
+        _model = [[ListModel alloc] init];
+        
+        NSString *modelFile = [[NSBundle mainBundle] pathForResource:@"example" ofType:@"plist"];
+        NSArray *modelArray = [[NSArray alloc] initWithContentsOfFile:modelFile];
+        
+        for (NSDictionary* modelData in modelArray) {
+            [self createModel:_model fromDict:modelData];
+        }
+
+    }
+    
+    return _model;
+}
+
 
 
 - (NSArray *) examples
@@ -46,7 +84,7 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         // Custom initialization
-        [self createModel];
+       // [self createModel];
     }
     return self;
 }
@@ -87,14 +125,26 @@
 }
 
 #pragma mark - Table view delegate
+
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
     ListModel* model = [self.examples objectAtIndex:indexPath.row];
-    id controllerClass = NSClassFromString(model.controller);
-    id controller = [[controllerClass alloc] init];
-    [controller setModel:model];
+    id controller = nil;
+    
+    if ([model.controller isEqualToString:@"ExampleListController"]) {
+        controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ExampleListController"];
+    }
+    else {
+        
+        id controllerClass = NSClassFromString(model.controller);
+        controller = [[controllerClass alloc] init];
+    }
+
+    if ([controller respondsToSelector:@selector(setModel:)]) {
+        [controller setModel:model];
+    }
     
     [self.navigationController pushViewController:controller animated:YES];
 }
