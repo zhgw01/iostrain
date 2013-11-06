@@ -50,7 +50,7 @@
 				<key>description</key>
 				<string>custom a switch</string>
 				<key>controller</key>
-				<string>CustomControllViewController</string>
+				<string>CustomControlViewController</string>
 				<key>image</key>
 				<string>cat</string>
 				<key>rate</key>

@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Zhang Gongwei. All rights reserved.
 //
 
-#import "CustomControllViewController.h"
+#import "CustomControlViewController.h"
 
-@interface CustomControllViewController ()
+@interface CustomControlViewController ()
 
 @end
 
-@implementation CustomControllViewController
+@implementation CustomControlViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

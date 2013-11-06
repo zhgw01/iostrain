@@ -10,8 +10,8 @@
 		11139E33182612800081148D /* example.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11139E32182612800081148D /* example.plist */; };
 		11196B1D1827E86D0086C412 /* MBSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 11196B1C1827E86D0086C412 /* MBSwitch.m */; };
 		113A89B618155792008573A3 /* ListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 113A89B518155792008573A3 /* ListModel.m */; };
-		1168D8CD182A82ED005BCCB6 /* CustomControllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1168D8CB182A82ED005BCCB6 /* CustomControllViewController.m */; };
-		1168D8CE182A82ED005BCCB6 /* CustomControllViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1168D8CC182A82ED005BCCB6 /* CustomControllViewController.xib */; };
+		1168D8CD182A82ED005BCCB6 /* CustomControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1168D8CB182A82ED005BCCB6 /* CustomControlViewController.m */; };
+		1168D8CE182A82ED005BCCB6 /* CustomControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1168D8CC182A82ED005BCCB6 /* CustomControlViewController.xib */; };
 		119C91B0180579A30069014D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 119C91AF180579A30069014D /* Foundation.framework */; };
 		119C91B2180579A30069014D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 119C91B1180579A30069014D /* CoreGraphics.framework */; };
 		119C91B4180579A30069014D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 119C91B3180579A30069014D /* UIKit.framework */; };
@@ -45,9 +45,9 @@
 		11196B1C1827E86D0086C412 /* MBSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBSwitch.m; path = CustomControll/MBSwitch.m; sourceTree = "<group>"; };
 		113A89B418155792008573A3 /* ListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListModel.h; sourceTree = "<group>"; };
 		113A89B518155792008573A3 /* ListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListModel.m; sourceTree = "<group>"; };
-		1168D8CA182A82ED005BCCB6 /* CustomControllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomControllViewController.h; path = CustomControll/CustomControllViewController.h; sourceTree = "<group>"; };
-		1168D8CB182A82ED005BCCB6 /* CustomControllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomControllViewController.m; path = CustomControll/CustomControllViewController.m; sourceTree = "<group>"; };
-		1168D8CC182A82ED005BCCB6 /* CustomControllViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomControllViewController.xib; path = CustomControll/CustomControllViewController.xib; sourceTree = "<group>"; };
+		1168D8CA182A82ED005BCCB6 /* CustomControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomControlViewController.h; path = CustomControll/CustomControlViewController.h; sourceTree = "<group>"; };
+		1168D8CB182A82ED005BCCB6 /* CustomControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomControlViewController.m; path = CustomControll/CustomControlViewController.m; sourceTree = "<group>"; };
+		1168D8CC182A82ED005BCCB6 /* CustomControlViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomControlViewController.xib; path = CustomControll/CustomControlViewController.xib; sourceTree = "<group>"; };
 		119C91AC180579A30069014D /* Train.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Train.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		119C91AF180579A30069014D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		119C91B1180579A30069014D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -108,9 +108,9 @@
 			children = (
 				11196B1B1827E86D0086C412 /* MBSwitch.h */,
 				11196B1C1827E86D0086C412 /* MBSwitch.m */,
-				1168D8CA182A82ED005BCCB6 /* CustomControllViewController.h */,
-				1168D8CB182A82ED005BCCB6 /* CustomControllViewController.m */,
-				1168D8CC182A82ED005BCCB6 /* CustomControllViewController.xib */,
+				1168D8CA182A82ED005BCCB6 /* CustomControlViewController.h */,
+				1168D8CB182A82ED005BCCB6 /* CustomControlViewController.m */,
+				1168D8CC182A82ED005BCCB6 /* CustomControlViewController.xib */,
 			);
 			name = CustomControll;
 			sourceTree = "<group>";
@@ -288,7 +288,7 @@
 				119C91C8180579A30069014D /* Images.xcassets in Resources */,
 				119C91BA180579A30069014D /* InfoPlist.strings in Resources */,
 				119C91C3180579A30069014D /* Main.storyboard in Resources */,
-				1168D8CE182A82ED005BCCB6 /* CustomControllViewController.xib in Resources */,
+				1168D8CE182A82ED005BCCB6 /* CustomControlViewController.xib in Resources */,
 				11139E33182612800081148D /* example.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,7 +312,7 @@
 				119C91C0180579A30069014D /* AppDelegate.m in Sources */,
 				119C91BC180579A30069014D /* main.m in Sources */,
 				11196B1D1827E86D0086C412 /* MBSwitch.m in Sources */,
-				1168D8CD182A82ED005BCCB6 /* CustomControllViewController.m in Sources */,
+				1168D8CD182A82ED005BCCB6 /* CustomControlViewController.m in Sources */,
 				113A89B618155792008573A3 /* ListModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

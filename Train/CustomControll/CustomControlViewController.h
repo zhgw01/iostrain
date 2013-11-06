@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CustomControllViewController : UIViewController
+@interface CustomControlViewController : UIViewController
 
 @end
