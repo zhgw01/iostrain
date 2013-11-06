@@ -2,34 +2,63 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-<dict>
-	<key>name</key>
-	<string>Core Animation</string>
-	<key>description</key>
-	<string>example of animations</string>
-	<key>controller</key>
-	<string>ExampleListController</string>
-	<key>image</key>
-	<string>bull</string>
-	<key>rate</key>
-	<integer>5</integer>
-	<key>examples</key>
-	<array>
-		<dict>
-			<key>name</key>
-			<string>CA1</string>
-			<key>description</key>
-			<string>unknow example</string>
-			<key>controller</key>
-			<string>UIViewController</string>
-			<key>image</key>
-			<string>cat</string>
-			<key>rate</key>
-			<integer>0</integer>
-			<key>examples</key>
-			<array/>
-		</dict>
-	</array>
-</dict>
+	<dict>
+		<key>name</key>
+		<string>Core Animation</string>
+		<key>description</key>
+		<string>example of animations</string>
+		<key>controller</key>
+		<string>ExampleListController</string>
+		<key>image</key>
+		<string>bull</string>
+		<key>rate</key>
+		<integer>5</integer>
+		<key>examples</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>CA1</string>
+				<key>description</key>
+				<string>unknow example</string>
+				<key>controller</key>
+				<string>UIViewController</string>
+				<key>image</key>
+				<string>cat</string>
+				<key>rate</key>
+				<integer>0</integer>
+				<key>examples</key>
+				<array/>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Custom Control</string>
+		<key>description</key>
+		<string>example of custom controlls</string>
+		<key>controller</key>
+		<string>ExampleListController</string>
+		<key>image</key>
+		<string>bull</string>
+		<key>rate</key>
+		<integer>5</integer>
+		<key>examples</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Switch</string>
+				<key>description</key>
+				<string>custom a switch</string>
+				<key>controller</key>
+				<string>CustomControllViewController</string>
+				<key>image</key>
+				<string>cat</string>
+				<key>rate</key>
+				<integer>0</integer>
+				<key>examples</key>
+				<array/>
+			</dict>
+		</array>
+	</dict>
 </array>
 </plist>

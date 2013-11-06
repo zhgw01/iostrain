@@ -119,7 +119,7 @@
     rateLabel.text = model.description;
     
     UILabel *priceLabel = (UILabel *) [cell viewWithTag:104];
-    priceLabel.text = [NSString stringWithFormat:@"%d", self.model.rate];
+    priceLabel.text = [NSString stringWithFormat:@"%ld", (long)self.model.rate];
     
     return cell;
 }
@@ -139,7 +139,7 @@
     else {
         
         id controllerClass = NSClassFromString(model.controller);
-        controller = [[controllerClass alloc] init];
+        controller = [[controllerClass alloc] initWithNibName:nil bundle:nil];
     }
 
     if ([controller respondsToSelector:@selector(setModel:)]) {
