@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110F35F918386356006197EC /* SMCLove.m in Sources */ = {isa = PBXBuildFile; fileRef = 110F35F318386356006197EC /* SMCLove.m */; };
+		110F35FA18386356006197EC /* SMRotaryWheel.m in Sources */ = {isa = PBXBuildFile; fileRef = 110F35F618386356006197EC /* SMRotaryWheel.m */; };
+		110F35FB18386356006197EC /* SMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 110F35F818386356006197EC /* SMViewController.m */; };
+		110F360818386361006197EC /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 110F35FD18386361006197EC /* bg.png */; };
+		110F360918386361006197EC /* centerButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 110F35FE18386361006197EC /* centerButton.png */; };
+		110F360A18386361006197EC /* icon0.png in Resources */ = {isa = PBXBuildFile; fileRef = 110F35FF18386361006197EC /* icon0.png */; };
+		110F360B18386361006197EC /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 110F360018386361006197EC /* icon1.png */; };
+		110F360C18386361006197EC /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 110F360118386361006197EC /* icon2.png */; };
+		110F360D18386361006197EC /* icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 110F360218386361006197EC /* icon3.png */; };
+		110F360E18386361006197EC /* icon4.png in Resources */ = {isa = PBXBuildFile; fileRef = 110F360318386361006197EC /* icon4.png */; };
+		110F360F18386361006197EC /* icon5.png in Resources */ = {isa = PBXBuildFile; fileRef = 110F360418386361006197EC /* icon5.png */; };
+		110F361018386361006197EC /* icon6.png in Resources */ = {isa = PBXBuildFile; fileRef = 110F360518386361006197EC /* icon6.png */; };
+		110F361118386361006197EC /* icon7.png in Resources */ = {isa = PBXBuildFile; fileRef = 110F360618386361006197EC /* icon7.png */; };
+		110F361218386361006197EC /* segment.png in Resources */ = {isa = PBXBuildFile; fileRef = 110F360718386361006197EC /* segment.png */; };
 		11139E33182612800081148D /* example.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11139E32182612800081148D /* example.plist */; };
 		11196B1D1827E86D0086C412 /* MBSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 11196B1C1827E86D0086C412 /* MBSwitch.m */; };
 		113A89B618155792008573A3 /* ListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 113A89B518155792008573A3 /* ListModel.m */; };
@@ -40,6 +54,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		110F35F218386356006197EC /* SMCLove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMCLove.h; path = CustomControll/SMCLove.h; sourceTree = "<group>"; };
+		110F35F318386356006197EC /* SMCLove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMCLove.m; path = CustomControll/SMCLove.m; sourceTree = "<group>"; };
+		110F35F418386356006197EC /* SMRotaryProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMRotaryProtocol.h; path = CustomControll/SMRotaryProtocol.h; sourceTree = "<group>"; };
+		110F35F518386356006197EC /* SMRotaryWheel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMRotaryWheel.h; path = CustomControll/SMRotaryWheel.h; sourceTree = "<group>"; };
+		110F35F618386356006197EC /* SMRotaryWheel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMRotaryWheel.m; path = CustomControll/SMRotaryWheel.m; sourceTree = "<group>"; };
+		110F35F718386356006197EC /* SMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMViewController.h; path = CustomControll/SMViewController.h; sourceTree = "<group>"; };
+		110F35F818386356006197EC /* SMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMViewController.m; path = CustomControll/SMViewController.m; sourceTree = "<group>"; };
+		110F35FD18386361006197EC /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		110F35FE18386361006197EC /* centerButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = centerButton.png; sourceTree = "<group>"; };
+		110F35FF18386361006197EC /* icon0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon0.png; sourceTree = "<group>"; };
+		110F360018386361006197EC /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
+		110F360118386361006197EC /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
+		110F360218386361006197EC /* icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon3.png; sourceTree = "<group>"; };
+		110F360318386361006197EC /* icon4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon4.png; sourceTree = "<group>"; };
+		110F360418386361006197EC /* icon5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon5.png; sourceTree = "<group>"; };
+		110F360518386361006197EC /* icon6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon6.png; sourceTree = "<group>"; };
+		110F360618386361006197EC /* icon7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon7.png; sourceTree = "<group>"; };
+		110F360718386361006197EC /* segment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segment.png; sourceTree = "<group>"; };
 		11139E32182612800081148D /* example.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = example.plist; path = Data/example.plist; sourceTree = "<group>"; };
 		11196B1B1827E86D0086C412 /* MBSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBSwitch.h; path = CustomControll/MBSwitch.h; sourceTree = "<group>"; };
 		11196B1C1827E86D0086C412 /* MBSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBSwitch.m; path = CustomControll/MBSwitch.m; sourceTree = "<group>"; };
@@ -95,6 +127,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		110F35FC18386361006197EC /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				110F35FD18386361006197EC /* bg.png */,
+				110F35FE18386361006197EC /* centerButton.png */,
+				110F35FF18386361006197EC /* icon0.png */,
+				110F360018386361006197EC /* icon1.png */,
+				110F360118386361006197EC /* icon2.png */,
+				110F360218386361006197EC /* icon3.png */,
+				110F360318386361006197EC /* icon4.png */,
+				110F360418386361006197EC /* icon5.png */,
+				110F360518386361006197EC /* icon6.png */,
+				110F360618386361006197EC /* icon7.png */,
+				110F360718386361006197EC /* segment.png */,
+			);
+			name = assets;
+			path = CustomControll/assets;
+			sourceTree = "<group>";
+		};
 		11139E311826122D0081148D /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,11 +157,19 @@
 		11196B1A1827E65B0086C412 /* CustomControll */ = {
 			isa = PBXGroup;
 			children = (
+				110F35FC18386361006197EC /* assets */,
 				11196B1B1827E86D0086C412 /* MBSwitch.h */,
 				11196B1C1827E86D0086C412 /* MBSwitch.m */,
 				1168D8CA182A82ED005BCCB6 /* CustomControlViewController.h */,
 				1168D8CB182A82ED005BCCB6 /* CustomControlViewController.m */,
 				1168D8CC182A82ED005BCCB6 /* CustomControlViewController.xib */,
+				110F35F218386356006197EC /* SMCLove.h */,
+				110F35F318386356006197EC /* SMCLove.m */,
+				110F35F418386356006197EC /* SMRotaryProtocol.h */,
+				110F35F518386356006197EC /* SMRotaryWheel.h */,
+				110F35F618386356006197EC /* SMRotaryWheel.m */,
+				110F35F718386356006197EC /* SMViewController.h */,
+				110F35F818386356006197EC /* SMViewController.m */,
 			);
 			name = CustomControll;
 			sourceTree = "<group>";
@@ -286,10 +345,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				119C91C8180579A30069014D /* Images.xcassets in Resources */,
+				110F361218386361006197EC /* segment.png in Resources */,
+				110F360C18386361006197EC /* icon2.png in Resources */,
 				119C91BA180579A30069014D /* InfoPlist.strings in Resources */,
+				110F360918386361006197EC /* centerButton.png in Resources */,
+				110F360818386361006197EC /* bg.png in Resources */,
+				110F360E18386361006197EC /* icon4.png in Resources */,
+				110F360F18386361006197EC /* icon5.png in Resources */,
+				110F361018386361006197EC /* icon6.png in Resources */,
 				119C91C3180579A30069014D /* Main.storyboard in Resources */,
+				110F360D18386361006197EC /* icon3.png in Resources */,
+				110F360A18386361006197EC /* icon0.png in Resources */,
+				110F361118386361006197EC /* icon7.png in Resources */,
 				1168D8CE182A82ED005BCCB6 /* CustomControlViewController.xib in Resources */,
 				11139E33182612800081148D /* example.plist in Resources */,
+				110F360B18386361006197EC /* icon1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,11 +378,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				110F35FA18386356006197EC /* SMRotaryWheel.m in Sources */,
+				110F35FB18386356006197EC /* SMViewController.m in Sources */,
 				119C91E618059B7E0069014D /* ExampleListController.m in Sources */,
 				119C91C0180579A30069014D /* AppDelegate.m in Sources */,
 				119C91BC180579A30069014D /* main.m in Sources */,
 				11196B1D1827E86D0086C412 /* MBSwitch.m in Sources */,
 				1168D8CD182A82ED005BCCB6 /* CustomControlViewController.m in Sources */,
+				110F35F918386356006197EC /* SMCLove.m in Sources */,
 				113A89B618155792008573A3 /* ListModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

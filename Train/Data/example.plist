@@ -58,6 +58,20 @@
 				<key>examples</key>
 				<array/>
 			</dict>
+            <dict>
+				<key>name</key>
+				<string>RotaryWheel</string>
+				<key>description</key>
+				<string>Rotary Wheel</string>
+				<key>controller</key>
+				<string>SMViewController</string>
+				<key>image</key>
+				<string>cat</string>
+				<key>rate</key>
+				<integer>0</integer>
+				<key>examples</key>
+				<array/>
+			</dict>
 		</array>
 	</dict>
 </array>
