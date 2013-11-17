@@ -10,6 +10,9 @@
 #import "SMRotaryProtocol.h"
 
 @interface SMRotaryWheel : UIControl
+{
+    BOOL _dragging;
+}
 
 @property (weak) id <SMRotaryProtocol> delegate;
 @property (nonatomic, strong) UIView *container;

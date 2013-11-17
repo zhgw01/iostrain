@@ -17,6 +17,7 @@
     - (void) buildClovesOdd;
     - (UIImageView *) getCloveByValue:(int)value;
     - (NSString *) getCloveName:(int)position;
+    - (void) select:(int)section;
 @end
 
 static float deltaAngle;
@@ -205,12 +206,15 @@ static float maxAlphavalue = 1.0;
     
 	float dx = touchPoint.x - container.center.x;
 	float dy = touchPoint.y - container.center.y;
-	deltaAngle = atan2(dy,dx); 
+	deltaAngle = atan2(dy,dx);
+    
     
     startTransform = container.transform;
     
     UIImageView *im = [self getCloveByValue:currentValue];
     im.alpha = minAlphavalue;
+    
+    _dragging = NO;
     
     return YES;
     
@@ -218,7 +222,8 @@ static float maxAlphavalue = 1.0;
 
 - (BOOL)continueTrackingWithTouch:(UITouch*)touch withEvent:(UIEvent*)event
 {
-        
+    _dragging = YES;
+    
 	CGPoint pt = [touch locationInView:self];
     
     float dist = [self calculateDistanceFromCenter:pt];
@@ -248,9 +253,8 @@ static float maxAlphavalue = 1.0;
 	
 }
 
-- (void)endTrackingWithTouch:(UITouch*)touch withEvent:(UIEvent*)event
+- (void)onDragging
 {
-    
     CGFloat radians = atan2f(container.transform.b, container.transform.a);
     
     CGFloat newVal = 0.0;
@@ -293,11 +297,53 @@ static float maxAlphavalue = 1.0;
     
     [UIView commitAnimations];
     
-    [self.delegate wheelDidChangeValue:[self getCloveName:currentValue]];
+    [self select:self.currentValue];
+}
+
+- (void) onClick:(UITouch*)touch withEvent:(UIEvent*)event
+{
+   	CGPoint pt = [touch locationInView:self];
     
-    UIImageView *im = [self getCloveByValue:currentValue];
-    im.alpha = maxAlphavalue;
+   
+   	float dx = self.container.center.x - pt.x;
+    float dy = self.container.center.y - pt.y;
+	float radians = atan2(dy,dx);
     
+    int section;
+    
+    for (SMClove *c in cloves) {
+        
+        if (c.minValue > 0 && c.maxValue < 0) { // anomalous case
+            
+            if (c.maxValue > radians || c.minValue < radians)
+                section = c.value;
+            
+        }
+        else if (radians > c.minValue && radians < c.maxValue) {
+            
+            section = c.value;
+            
+        }
+    }
+    
+    section = (self.numberOfSections - section) % self.numberOfSections;
+    section = (self.currentValue + section) % self.numberOfSections;
+    
+    [self select:section];
+     
+}
+
+- (void)endTrackingWithTouch:(UITouch*)touch withEvent:(UIEvent*)event
+{
+    if (_dragging) {
+        
+        [self onDragging];
+    }
+    else {
+       [self onClick:touch withEvent:event];
+    }
+    
+    _dragging = NO;
 }
 
 - (NSString *) getCloveName:(int)position {
@@ -348,6 +394,23 @@ static float maxAlphavalue = 1.0;
     return res;
 }
 
+- (void) select:(int)section
+{
+    if (section != self.currentValue) {
+        float angle = (self.currentValue - section) * 2.0 * M_PI / self.numberOfSections;
+        [UIView animateWithDuration:0.5 animations:^{
+            self.container.transform = CGAffineTransformRotate(self.container.transform, angle);
+        }];
+    }
+    
+    self.currentValue = section;
+    
+    [self.delegate wheelDidChangeValue:[self getCloveName:currentValue]];
+    
+    UIImageView *im = [self getCloveByValue:currentValue];
+    im.alpha = maxAlphavalue;
+    
+}
 
 
 @end
