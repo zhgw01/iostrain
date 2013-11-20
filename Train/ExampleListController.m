@@ -7,6 +7,7 @@
 //
 
 #import "ExampleListController.h"
+#import "Log.h"
 
 
 @interface ExampleListController ()
@@ -85,6 +86,7 @@
     if (self) {
         // Custom initialization
        // [self createModel];
+        DDLogVerbose(@"Unarchive ExampleListViewController");
     }
     return self;
 }

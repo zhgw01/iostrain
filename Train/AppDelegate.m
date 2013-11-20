@@ -7,12 +7,23 @@
 //
 
 #import "AppDelegate.h"
+#import "Log.h"
+#import "DDTTYLogger.h"
+#import "DDFileLogger.h"
+
+#ifdef DEBUG
+int ddLogLevel = LOG_LEVEL_VERBOSE;
+#else
+int ddLogLevel = LOG_LEVEL_WARN;
+#endif
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    DDLogVerbose(@"starting application");
     return YES;
 }
 							
