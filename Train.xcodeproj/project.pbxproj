@@ -49,6 +49,8 @@
 		119C91DB180579A30069014D /* TrainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C91DA180579A30069014D /* TrainTests.m */; };
 		119C91E618059B7E0069014D /* ExampleListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C91E518059B7E0069014D /* ExampleListController.m */; };
 		11A98D46180D78810042BA90 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A98D45180D78810042BA90 /* QuartzCore.framework */; };
+		11F5748B18B23F250049EFB1 /* TBMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F5748A18B23F250049EFB1 /* TBMapViewController.m */; };
+		11F5748E18B240870049EFB1 /* TBQuardTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F5748D18B240870049EFB1 /* TBQuardTree.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +126,10 @@
 		119C91E418059B7E0069014D /* ExampleListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleListController.h; sourceTree = "<group>"; };
 		119C91E518059B7E0069014D /* ExampleListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleListController.m; sourceTree = "<group>"; };
 		11A98D45180D78810042BA90 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		11F5748918B23F250049EFB1 /* TBMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBMapViewController.h; path = Map/LargeData/TBMapViewController.h; sourceTree = "<group>"; };
+		11F5748A18B23F250049EFB1 /* TBMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBMapViewController.m; path = Map/LargeData/TBMapViewController.m; sourceTree = "<group>"; };
+		11F5748C18B240870049EFB1 /* TBQuardTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBQuardTree.h; path = Map/LargeData/TBQuardTree.h; sourceTree = "<group>"; };
+		11F5748D18B240870049EFB1 /* TBQuardTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBQuardTree.m; path = Map/LargeData/TBQuardTree.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +293,7 @@
 		119C91B5180579A30069014D /* Train */ = {
 			isa = PBXGroup;
 			children = (
+				11F5748718B23C3E0049EFB1 /* Map */,
 				1107B857183CFC74008C4AD5 /* 3rdParty */,
 				11196B1A1827E65B0086C412 /* CustomControll */,
 				11139E311826122D0081148D /* Data */,
@@ -331,6 +338,25 @@
 				119C91D7180579A30069014D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		11F5748718B23C3E0049EFB1 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				11F5748818B23DD90049EFB1 /* LargeData */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		11F5748818B23DD90049EFB1 /* LargeData */ = {
+			isa = PBXGroup;
+			children = (
+				11F5748918B23F250049EFB1 /* TBMapViewController.h */,
+				11F5748A18B23F250049EFB1 /* TBMapViewController.m */,
+				11F5748C18B240870049EFB1 /* TBQuardTree.h */,
+				11F5748D18B240870049EFB1 /* TBQuardTree.m */,
+			);
+			name = LargeData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -457,9 +483,11 @@
 				1107B86E183CFCC4008C4AD5 /* DDLog.m in Sources */,
 				119C91BC180579A30069014D /* main.m in Sources */,
 				11196B1D1827E86D0086C412 /* MBSwitch.m in Sources */,
+				11F5748B18B23F250049EFB1 /* TBMapViewController.m in Sources */,
 				1168D8CD182A82ED005BCCB6 /* CustomControlViewController.m in Sources */,
 				110F35F918386356006197EC /* SMCLove.m in Sources */,
 				113A89B618155792008573A3 /* ListModel.m in Sources */,
+				11F5748E18B240870049EFB1 /* TBQuardTree.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

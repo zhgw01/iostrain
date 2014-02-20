@@ -74,5 +74,34 @@
 			</dict>
 		</array>
 	</dict>
+   	<dict>
+		<key>name</key>
+		<string>Map</string>
+		<key>description</key>
+		<string>example of map</string>
+		<key>controller</key>
+		<string>ExampleListController</string>
+		<key>image</key>
+		<string>bull</string>
+		<key>rate</key>
+		<integer>5</integer>
+		<key>examples</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Display Large Data</string>
+				<key>description</key>
+				<string>How to handle large amounts of data on map</string>
+				<key>controller</key>
+				<string>TBMapViewController</string>
+				<key>image</key>
+				<string>cat</string>
+				<key>rate</key>
+				<integer>0</integer>
+				<key>examples</key>
+				<array/>
+			</dict>
+		</array>
+	</dict>
 </array>
 </plist>
