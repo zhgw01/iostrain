@@ -1,0 +1,3 @@
+[submodule "Train/3rdParty/JsonModel"]
+	path = Train/3rdParty/JsonModel
+	url = https://github.com/icanzilb/JSONModel.git
