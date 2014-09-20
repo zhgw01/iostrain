@@ -1,0 +1,12 @@
+{
+	"controllers": [
+	{
+		"title": "Core Animate",
+		"controller": "ExampleListController"
+	},
+	{
+		"title": "Custom Conroller",
+		"controller": "ExampleListController"
+	}
+	]
+}
