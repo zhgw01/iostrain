@@ -40,6 +40,8 @@
     
     XCTAssertNil(err, @"%@", [err localizedDescription]);
     
+    XCTAssert([m.controller isEqualToString:@"ExampleListController"]);
+    
 }
 
 @end
