@@ -15,11 +15,16 @@
 @interface ListModel : JSONModel
 
 
-@property (copy) NSString* name;
-@property (copy) NSString* description;
-@property (copy) NSString* controller;
-@property (copy) NSString* image;
-@property (nonatomic, assign) NSInteger rate;
-@property (nonatomic, strong, readonly) NSArray* examples;
+@property (strong, nonatomic) NSString* name;
+@property (strong, nonatomic) NSString<Optional>* description;
+@property (strong, nonatomic) NSString* controller;
+@property (strong, nonatomic) NSString<Optional>* image;
+@property (assign, nonatomic) NSInteger rate;
+
+@end
+
+@interface ExampleFile : JSONModel
+
+@property (strong, nonatomic) NSArray<ListModel>* controllers;
 
 @end

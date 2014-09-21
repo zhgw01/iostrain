@@ -18,12 +18,31 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        // Custom initialization
-       // [self createModel];
         DDLogVerbose(@"Unarchive ExampleListViewController");
     }
     return self;
 }
+
+#pragma mark - View Event
+-(void)viewDidLoad
+{
+    if (self.models) {
+        DDLogInfo(@"Model has been set");
+    } else {
+        DDLogInfo(@"We will load model from controllers.json");
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"controllers" ofType:@"json"];
+        NSString *json = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+        
+        NSError* err;
+        ExampleFile* example = [[ExampleFile alloc] initWithString:json error:&err];
+        if (err) {
+            DDLogError(@"Unable to convert to ExampleFile: %@", [err localizedDescription]);
+        }else {
+            self.models = example.controllers;
+        }
+    }
+}
+
 
 #pragma mark - Table view data source
 
@@ -78,7 +97,7 @@
         controller = [[controllerClass alloc] initWithNibName:nil bundle:nil];
     }
 
-    if ([controller respondsToSelector:@selector(setModel:)]) {
+    if ([controller respondsToSelector:@selector(setModels:)]) {
         //[controller setModels:nil];
     }
     

@@ -12,3 +12,7 @@
 @implementation ListModel
 
 @end
+
+@implementation ExampleFile
+
+@end
