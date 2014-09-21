@@ -7,8 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JSONModel.h"
 
-@interface ListModel : NSObject
+@protocol ListModel
+@end
+
+@interface ListModel : JSONModel
 
 
 @property (copy) NSString* name;
@@ -17,7 +21,5 @@
 @property (copy) NSString* image;
 @property (nonatomic, assign) NSInteger rate;
 @property (nonatomic, strong, readonly) NSArray* examples;
-
-- (void) addExample: (ListModel *) example;
 
 @end

@@ -8,33 +8,7 @@
 
 #import "ListModel.h"
 
-@interface ListModel ()
-
-@property (strong, nonatomic) NSMutableArray* internalModels;
-
-@end
 
 @implementation ListModel
-
-
-- (id) init
-{
-    self = [super init];
-    if (self) {
-        self.internalModels = [[NSMutableArray alloc] init];
-    }
-    
-    return self;
-}
-
-- (NSArray *) examples
-{
-    return [self.internalModels copy];
-}
-
-- (void) addExample:(ListModel *)example
-{
-    [self.internalModels addObject:example];
-}
 
 @end

@@ -13,6 +13,6 @@
 
 @interface ExampleListController : UITableViewController
 
-@property (nonatomic, strong) ListModel* model;
+@property (strong, nonatomic) NSArray<ListModel>* models;
 
 @end
