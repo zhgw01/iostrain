@@ -6,22 +6,22 @@
       "controller": "ExampleListController",
       "image": "bull",
       "rate": "5",
-      "controllers": [
-        {
-          "name": "Core Animate",
-          "description": "Demos of core Animate",
-          "controller": "ExampleListController",
-          "image": "bull",
-          "rate": "5"
-        }
-      ]
     },
     {
       "name": "Custom Control",
       "description": "Demos of Custom Control",
       "controller": "ExampleListController",
       "image": "bull",
-      "rate": "5"
+      "rate": "5",
+      "controllers": [
+        {
+          "name": "Switch",
+          "description": "Custom a Switch",
+          "controller": "CustomControlViewController",
+          "image": "cat",
+          "rate": "5"
+        }
+      ]
     }
   ]
 }

@@ -13,12 +13,21 @@
 @implementation ExampleListController
 
 
+- (id) init
+{
+    if (self = [super init]) {
+        _topLevel = YES;
+    }
+    
+    return self;
+}
 
 - (id) initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
         DDLogVerbose(@"Unarchive ExampleListViewController");
+        _topLevel = YES;
     }
     return self;
 }
@@ -28,7 +37,7 @@
 {
     if (self.models) {
         DDLogInfo(@"Model has been set");
-    } else {
+    } else if(self.topLevel){
         DDLogInfo(@"We will load model from controllers.json");
         NSString *path = [[NSBundle mainBundle] pathForResource:@"controllers" ofType:@"json"];
         NSString *json = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
@@ -90,6 +99,9 @@
     
     if ([model.controller isEqualToString:@"ExampleListController"]) {
         controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ExampleListController"];
+        [controller setModels:model.controllers];
+        [controller setTopLevel:NO];
+        
     }
     else {
         
@@ -97,9 +109,6 @@
         controller = [[controllerClass alloc] initWithNibName:nil bundle:nil];
     }
 
-    if ([controller respondsToSelector:@selector(setModels:)]) {
-        //[controller setModels:nil];
-    }
     
     [self.navigationController pushViewController:controller animated:YES];
 }

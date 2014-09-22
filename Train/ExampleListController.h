@@ -14,5 +14,6 @@
 @interface ExampleListController : UITableViewController
 
 @property (strong, nonatomic) NSArray<ListModel>* models;
+@property (assign, nonatomic) BOOL topLevel;
 
 @end
