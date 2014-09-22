@@ -34,6 +34,7 @@
 		113A89B618155792008573A3 /* ListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 113A89B518155792008573A3 /* ListModel.m */; };
 		1168D8CD182A82ED005BCCB6 /* CustomControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1168D8CB182A82ED005BCCB6 /* CustomControlViewController.m */; };
 		1168D8CE182A82ED005BCCB6 /* CustomControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1168D8CC182A82ED005BCCB6 /* CustomControlViewController.xib */; };
+		1186F17D19D0505A00329612 /* TestOptional.json in Resources */ = {isa = PBXBuildFile; fileRef = 1186F17C19D0505A00329612 /* TestOptional.json */; };
 		119C91B0180579A30069014D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 119C91AF180579A30069014D /* Foundation.framework */; };
 		119C91B2180579A30069014D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 119C91B1180579A30069014D /* CoreGraphics.framework */; };
 		119C91B4180579A30069014D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 119C91B3180579A30069014D /* UIKit.framework */; };
@@ -120,6 +121,7 @@
 		1168D8CA182A82ED005BCCB6 /* CustomControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomControlViewController.h; path = CustomControll/CustomControlViewController.h; sourceTree = "<group>"; };
 		1168D8CB182A82ED005BCCB6 /* CustomControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomControlViewController.m; path = CustomControll/CustomControlViewController.m; sourceTree = "<group>"; };
 		1168D8CC182A82ED005BCCB6 /* CustomControlViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomControlViewController.xib; path = CustomControll/CustomControlViewController.xib; sourceTree = "<group>"; };
+		1186F17C19D0505A00329612 /* TestOptional.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TestOptional.json; path = TestData/TestOptional.json; sourceTree = "<group>"; };
 		119C91AC180579A30069014D /* Train.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Train.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		119C91AF180579A30069014D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		119C91B1180579A30069014D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -470,6 +472,7 @@
 			isa = PBXGroup;
 			children = (
 				11FFD27E19CDC09E0038DD22 /* TestController.json */,
+				1186F17C19D0505A00329612 /* TestOptional.json */,
 			);
 			name = TestData;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				119C91D9180579A30069014D /* InfoPlist.strings in Resources */,
+				1186F17D19D0505A00329612 /* TestOptional.json in Resources */,
 				11FFD27F19CDC09E0038DD22 /* TestController.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,6 +20,7 @@
 @property (strong, nonatomic) NSString* controller;
 @property (strong, nonatomic) NSString<Optional>* image;
 @property (assign, nonatomic) NSInteger rate;
+@property (strong, nonatomic) NSArray<ListModel, Optional>* controllers;
 
 @end
 
