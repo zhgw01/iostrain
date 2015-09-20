@@ -12,7 +12,7 @@
 
 
 @property (copy) NSString* name;
-@property (copy) NSString* description;
+@property (copy) NSString* desc;
 @property (copy) NSString* controller;
 @property (copy) NSString* image;
 @property (nonatomic, assign) NSInteger rate;

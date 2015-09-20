@@ -25,7 +25,7 @@
     ListModel* childModel = [[ListModel alloc] init];
     
     childModel.name = [data objectForKey:@"name"];
-    childModel.description = [data objectForKey:@"description"];
+    childModel.desc = [data objectForKey:@"description"];
     childModel.controller = [data objectForKey:@"controller"];
     childModel.image = [data objectForKey:@"image"];
     childModel.rate = [[data objectForKey:@"rate"] integerValue];
