@@ -1,4 +1,4 @@
-# IOS Library
+# IOS Library [build status](https://travis-ci.org/zhgw01/iostrain.svg?branch=master)
 
 ## Tabbar
 
